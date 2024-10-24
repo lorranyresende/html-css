@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Mesma imagem, em tamanhos diferentes, para quando a tela for menor ou o usuário reduzir a aba a imagem diminuir "sozinha" e ficar sem barra de rolagem lateral.</p>
+
+    <picture>
+        <source media="(max-width: 700px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Reproduzindo áudio em HTML5</p>
+    <audio src="midia/successful-corporate (1).mp3" controls autoplay></audio>
+    <!--podemos utilizar outro formato de arquivo como por exemplo: MP3 WAV OGG para ter 100% de compatibilidade com outros navegadores.-->
+
+    <h1>Outra forma de reproduzir áudio</h1>
+    <audio preload="metadata" controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wag"> <!--tentar evitar esse arquivo wav pois é muito pesado-->
+    
+    </audio>
+</body>
+</html>

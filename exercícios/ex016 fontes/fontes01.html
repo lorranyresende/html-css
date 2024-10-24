@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+</head>
+<body>
+    <h2>Font-family mais comuns:    Arial, Verdana e Helvetica</h2>
+
+    <p>
+        <br> font-family: 'Courier New';   -> nomes compostos precisam de 'aspas'
+        <br> font-family: sans-serif;	    -> qualquer fonte sem serifa
+        <br> font-family: serif;		    -> qualquer fonte com serifa
+        <br> font-family: monospace;     -> qualquer fonte monoespaçada
+    </p>
+
+<h2>Safe combination:</h2>
+
+	<p>
+        Se não tiver uma opção de fonte, passa para a seguinte. (Pesquisar mais: CSS web safe font combinations).
+        <br> Ex:	font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+    </p>
+
+ <h2>*Dica: Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.</h2>
+
+ <h1>Existem vários tipos de MEDIDAS para tamanho de fontes na propriedade "font-size", os tipos de medidas podem ser divididos em:</h1>
+ 
+<p>Medidas Absolutas: cm (centímetro), mm (milímetro), in (polegada), px (pixel), pt (ponto) e pc (paica)</p>
+
+<p>
+    Nota:
+    É possível termos alguns problemas ao utilizar e representar algo com as Medidas Absolutas, pois as vezes o navegador não consegue chegar exatamente na especificação que determinamos, 1 cm por exemplo... Isso porque existem telas de tamanhos diferentes, telas de TV's, celulares e etc... Cada um mostrando de um jeito, sendo que a medida é Absoluta, até mesmo a medida "px" pode sofrer distorções, pois existem telas com diferentes grandezas de pixels.
+</p>
+
+<p>Medidas Relativas:  em (Relativo ao tamanho atual da fonte e Altura M), ex (Relativo à Altura x de uma fonte), rem (Relativo ao tamanho atual da fonte no ROOT [body ou *]), vw (View Width - Largura da Viewport/Tamanho da Tela), vh (View Height - Altura da Viewport/Tamanho da Tela) e %</p>
+
+<p>De todas essas medidas, basicamente vamos trabalhar somente com "em", "px" e talvez o "rem", essa é a recomendação do W3C para sites.</p>
+
+<p>Para sites, 16px como tamanho da fonte, geralmente é o tamanho normal e mais utilizado, normalmente esse é o tamanho padrão que os navegadores utilizam.</p> 
+
+<p>Já sobre a Medida "em", geralmente 1em é igual = a 16px - Sendo assim, ao utilizar o em, use 1em como tamanho de fonte. Exemplo de diminuição e aumento de em: 0.5em / 1.5em (use sempre ponto " . " e não vírgula)</p>
+
+<p>*Guanabara recomenda usar a Medida "em", porque ela trabalha com porcentagem do tamanho da fonte padrão, isso é bom para o site ser compatível com vários tamanhos de tela.</p>
+
+
+
+<h2>É possível alterar o Peso (finura/grossura do caractere) de fontes (que sejam compatíveis). Para alterarmos o Peso de uma fonte, usamos a Propriedade de Estilo "font-weight", esse Propriedade aceita valores/pesos literais e numéricos, como:</h2>
+
+<p>Literais: lighter (o mais fino), normal, bold e bolder (o mais grosso) </p>
+
+<p>Numéricos: 100, 200, 300, 400, 500, 600, 700, 800 e 900</p>
+
+<p>Todos esses valores de peso para a Propriedade "font-weight" são aceitos para algumas fontes, contanto que a fonte tenha suporte, podemos usar qualquer um deles.</p>
+
+<p>Outra variação no estilo das fontes que podemos fazer é deixar em "itálico", usamos a Propriedade de Estilo "font-style" com o valor "italic"</p>
+
+<p>Já para deixar uma fonte sublinhada, usamos a Propriedade de Estilo "text-decoration" com o valor "underline"</p>
+
+<p>Código de exemplo com essas configurações:</p>
+
+<p>
+    body {
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 1em;
+        font-style: italic;
+    }
+</p>
+
+<p>É possível fazer essas quatro especificações em uma única declaração de uma linha, condensando todas as configurações em uma Shorthand. Existem Shorthands para vários elementos, uma Shorthand para fontes deve obrigatoriamente seguir essa ordem: font-style -> font-weight -> font-size -> font-family - Devemos inserir os valores dessas Propriedades, nessa ordem, ao criar a Shorthand.</p>
+
+<p>Exemplo de Shorthand para fonte: </p>
+
+<p>font: italic bolder 1em sans-serif;</p>
+
+<p>
+    Nota:
+    É possível criar Shorthands para fontes sem necessariamente usar todas essas Propriedades, contando que a ordem seja respeitada. Exemplo: font: bolder 1em sans-serif;
+</p>
+
+<p>Não existe Shorthand pra tudo, porém existem vários Shorthands que podemos utilizar no nosso código HTML/CSS.</p>
+</body>
+</html>
